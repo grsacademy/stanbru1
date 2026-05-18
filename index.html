@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>스탠브루 점포관리자 양성교육 안내</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+--primary:#ff6600; /* LOTTE EATZ 메인 컬러 */
+--dark:#2752ad; /* 헤더·푸터 배경 */
+--light:#fafafa; /* 페이지 배경 */
+--white:#fff;
+--text:#333;
+--radius:8px;
+--max-w:1200px;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+font-family:'Noto Sans KR',sans-serif;
+background:var(--light);
+color:var(--text);
+line-height:1.6;
+}
+a{color:inherit;text-decoration:none;}
+header{
+background:var(--dark);
+color:var(--white);
+padding:14px 0;
+}
+.container{
+max-width:var(--max-w);
+margin:auto;
+padding:0 20px;
+}
+.logo{
+font-size:1.4rem;
+font-weight:700;
+letter-spacing:-0.5px;
+}
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+.nav-links{
+display:flex;
+gap:20px;
+flex-wrap:wrap;
+}
+.nav-links a{
+font-weight:600;
+transition:color .2s;
+}
+.nav-links a:hover{color:var(--primary);}
+main{padding:40px 0;}
+section{
+background:var(--white);
+border-radius:var(--radius);
+padding:30px;
+margin-bottom:30px;
+box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+h1,h2,h3{
+color:var(--dark);
+margin-bottom:18px;
+}
+h1{font-size:2rem;}
+h2{font-size:1.6rem;}
+h3{font-size:1.4rem;}
+ul,ol{
+margin-left:20px;
+margin-top:10px;
+}
+li{margin-bottom:6px;}
+.badge{
+display:inline-block;
+background:var(--primary);
+color:#fff;
+font-size:.85rem;
+padding:2px 6px;
+border-radius:4px;
+margin-left:6px;
+}
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:15px;
+font-size:.95rem;
+}
+th,td{
+border:1px solid #e0e0e0;
+padding:8px 10px;
+text-align:center;
+}
+th{
+background:#f5f5f5;
+font-weight:600;
+}
+.img-box{
+width:100%;
+border-radius:var(--radius);
+margin:15px 0;
+}
+.img-box img{
+width:100%;
+height:auto;
+display:block;
+}
+footer{
+background:var(--dark);
+color:var(--white);
+text-align:center;
+padding:20px 0;
+font-size:.9rem;
+}
+@media(max-width:768px){
+.nav-links{flex-direction:column;gap:10px;}
+.container{padding:0 15px;}
+}/* 이미지 컨테이너 스타일 */
+.img-box {
+margin-top: 20px; /* 위쪽 여백 */
+display: flex; /* 중앙 정렬을 위해 사용 */
+justify-content: center; /* 가로 중앙 정렬 */
+}
+
+/* 로고 이미지 크기 조절 */
+.logo img {
+height: 25px; /* 원하는 높이로 조절하세요 */
+width: auto; /* 가로 비율은 자동으로 맞춰집니다 */
+display: block; /* 하단 여백 제거 */
+}
+
+/* 네비게이션 정렬 (기존 코드에 따라 조정 필요) */
+nav {
+display: flex;
+align-items: center; /* 로고와 메뉴가 세로 중앙에 오도록 함 */
+justify-content: space-between;
+}
+
+/* 실제 이미지 스타일 조절 */
+.img-box img {
+width: 100%; /* 모바일 등 작은 화면에서 가득 차게 */
+max-width: 600px; /* 최대 크기를 600px로 제한 (원하는 크기로 수정 가능) */
+height: auto; /* 비율 유지 */
+border-radius: 8px; /* 모서리를 약간 둥글게 (선택사항) */
+box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* 약간의 그림자 (선택사항) */
+}
+/* 1. 전체 섹션 설정: 고정 높이를 없애고 내용에 따라 늘어나게 합니다. */
+#location {
+padding: 60px 0; /* 위아래 여백 */
+height: auto !important; /* 고정 높이가 있다면 무시 */
+min-height: fit-content;
+overflow: visible; /* 잘린 내용이 보이도록 설정 */
+}
+
+/* 2. 컨테이너 및 그리드 설정 */
+.container {
+width: 100%;
+max-width: 1200px;
+margin: 0 auto;
+height: auto;
+}
+
+.grid-2 {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 30px;
+align-items: start; /* 내용물이 위에서부터 정렬되도록 */
+height: auto;
+}
+
+/* 3. 오른쪽 이미지 박스 설정 */
+.img-box {
+width: 100%;
+height: auto; /* 높이 자동 */
+}
+
+.map-container {
+display: flex;
+flex-direction: column;
+gap: 15px; /* 이미지와 버튼 사이 간격 */
+height: auto;
+}
+
+/* 4. 지도 이미지: 비율 유지하며 전체 노출 */
+.location-img {
+width: 100%;
+height: auto; /* 이미지의 원래 비율대로 높이 결정 */
+display: block;
+border-radius: 12px;
+border: 1px solid #eee;
+object-fit: contain; /* 이미지가 잘리지 않고 전체가 다 들어감 */
+}
+
+/* 5. 네이버 지도 버튼: 이미지 아래에 확실히 배치 */
+.map-link-btn {
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 12px;
+background-color: #f8f9fa;
+border: 1px solid #e9ecef;
+padding: 15px;
+border-radius: 12px;
+text-decoration: none;
+color: #333;
+transition: background 0.3s;
+/* 버튼이 잘리지 않도록 최소 높이 확보 */
+min-height: 60px;
+}
+
+.map-link-btn:hover {
+background-color: #f1f3f5;
+}
+
+.link-text {
+display: flex;
+flex-direction: column;
+text-align: left;
+}
+
+.link-text strong {
+font-size: 16px;
+color: #03c75a;
+}
+
+.link-text span {
+font-size: 13px;
+color: #666;
+}
+
+/* 모바일 대응: 화면이 작아지면 한 줄로 배치 */
+@media (max-width: 768px) {
+.grid-2 {
+grid-template-columns: 1fr;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                        <a href="/">
+                    <img src="logo.png" alt="스탠브루 점포관리자 양성교육">
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#overview">교육 개요</a>
+                <a href="#schedule">일정·장소</a>
+                <a href="#curriculum">커리큘럼</a>
+                <a href="#prepare">준비물</a>
+                <a href="#dorm">기숙사 안내</a>
+                <a href="#location">오시는 길</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+
+<main class="container">
+
+    <!-- 1️⃣ 교육 개요 -->
+    <section id="overview">
+        <h1>26년 5월 스탠브루 점포관리자 양성교육 안내</h1>
+        <p>2026년 5월 18일(월)부터 5월 29일(금)까지 <strong>스탠브루 점포관리자 양성교육</strong>이 진행됩니다.</p>
+    </section>
+
+    <!-- 2️⃣ 일정·장소 -->
+    <section id="schedule">
+        <h2>일정 및 장소</h2>
+        <ul>
+            <li>기간 : <strong>2026‑05‑18(월) - 2026‑05‑29(금)</strong></li>
+            <li>장소 : <strong>LOTTE GRS Academy (서울시 금천구 벚꽃로 104, 금천롯데타워)</strong></li>
+        </ul>
+
+        <h3>교육 일정표</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>구분</th>
+                    <th>날짜</th>
+                    <th>내용</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Off-JT(비대면 교육)</td>
+                    <td>5/18 (월)</td>
+                    <td>점포관리자 R&R, 서비스 오리엔테이션</td>
+                </tr>
+                <tr>
+                    <td>Off-JT(집체 교육)</td>
+                    <td>5/19(화) - 5/22(금)</td>
+                    <td>오퍼레이션, 점포관리자 관리 업무</td>
+                </tr>
+                <tr>
+                    <td>OJT(현장 실습)</td>
+                    <td>5/25(월) - 5/29(금)</td>
+                    <td>스탠브루 직영점 현장실습</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 3️⃣ 커리큘럼 -->
+    <section id="curriculum">
+        <h2>커리큘럼</h2>
+        <p>각 일자별 상세 교육 내용은 아래 표와 같이 진행됩니다.</p>
+
+        <h3>Off-JT(비대면) – 5/18 (월)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>일차</th>
+                    <th>과목명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1일차</td><td>오리엔테이션,점포관리자 R&R,서비스</td></tr>
+            </tbody>
+        </table>
+
+        <h3>Off-JT(집체 교육) – 5/19 (화) ~ 5/22 (금)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>일차</th>
+                    <th>과목명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>2일차</td><td>위생안전실무 이론, 전산시스템 이해, 노무 관리</td></tr>
+                <tr><td>3일차</td><td>스탠브루 커피의 이해, 정량정시, 에스프레소머신 실습</td></tr>
+                <tr><td>4일차</td><td>음료 제품 실습, 브루잉 머신 실습, STORE360</td></tr>
+                <tr><td>5일차</td><td>디저트 제품 실습, 위생안전실무 실습, OJT 안내</td></tr>
+
+            </tbody>
+        </table>
+
+        <h3>OJT – 5/25 (월) - 5/29 (금)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>일자</th>
+                    <th>과목명</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1일차</td><td>점포 현황 분석, 개인 위생, 세정살균제 관리, 더스터 관리</td></tr>
+                <tr><td>2일차</td><td>통합점포시스템(매출, 자재, 인사), 모바일 시스템</td></tr>
+				<tr><td>3일차</td><td>에스프레소머신, 브루잉머신 칼리브레이션, POS 및 PICK UP 응대, 디저트 제조</td></tr>
+				<tr><td>4일차</td><td>자재 재고 조사, 자재 소비기한 조사, 쇼케이스 관리, MD 용품 관리</td></tr>
+				<tr><td>5일차</td><td>고객 컴플레인 관리, 판촉, 플로워 라운딩</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 4️⃣ 교육 준비사항 -->
+    <section id="prepare">
+        <h2>교육 준비사항</h2>
+        <ul>
+            <li>검정색 바지 – 스키니·레깅스 착용 불가</li>
+            <li>검정색 신발 – 구두 굽 3 cm 이하 (슬리퍼·크록스 금지)</li>
+            <li>개인 필기 도구</li>
+            <li>건강진단 결과서(보건증)</li>
+            <li>유니폼 상의·앞치마·모자</li>
+            <li>머리망 – 머리를 묶는 경우 필수</li>
+            <li>마스크 – 점포 교육 시 착용</li>
+        </ul>
+    </section>
+
+    <!-- 5️⃣ 기숙사 안내 -->
+    <section id="dorm">
+        <h2>기숙사 사용 안내</h2>
+        <ul>
+            <li>입실 가능 시간 : 오후 5시 ~ 오후 11시 (잇소키 앱을 통한 출입)</li>
+            <li>개인 필요 물품(세면도구·수건·여벌 옷 등)은 직접 준비</li>
+            <li>드라이기 비치</li>
+            <li>음식·음주·흡연 금지</li>
+            <li>음주 후 입실 금지</li>
+            <li>정숙 유지 – 타 학습자와 편안한 취침을 위해</li>
+            <li>보안 – 오후 11시 이후 출입 불가</li>
+            <li>시설·비품 파손 시 원상 복구 또는 손해액 배상 청구</li>
+            <li>문의 : 사감실(기숙사 담당자)</li>
+        </ul>
+        <div class="img-box">
+            <img src="기숙사.png" alt="기숙사 내부 사진(플레이스홀더)">
+        </div>
+    </section>
+
+  
+
+<section id="location">
+    <div class="container">
+        <h2>시설 안내 및 오시는 길</h2>
+        <div class="grid-2">
+            <!-- 왼쪽: 상세 주소 정보 -->
+            <div class="map-box">
+                <p>📍 <strong>주소</strong>: 서울시 금천구 벚꽃로 104 금천롯데타워</p>
+                <p>🚇 <strong>지하철</strong>: 1호선 독산역 1번 출구에서 도보 약 5분</p>
+                <p>🚌 <strong>버스</strong>: 금천01, 금천06, 금천07, 금천08 (독산역 하차)</p>
+            </div>
+
+            <!-- 오른쪽: 지도 이미지 + 네이버 지도 링크 -->
+            <div class="img-box">
+                <div class="map-container">
+                    <!-- 지도 이미지 -->
+                    <img src="map.png" alt="지도 이미지" class="location-img">
+                    
+                    <!-- 하단 네이버 지도 버튼 -->
+                    <a href="https://map.naver.com/v5/search/롯데GRS아카데미" target="_blank" class="map-link-btn">
+                        <span class="map-icon">📍</span>
+                        <div class="link-text">
+                            <strong>네이버 지도에서 위치 보기</strong>
+                            <span>(클릭 시 지도로 이동합니다)</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+		
+		  <section>
+        <h2>문의사항</h2>
+        <ul>
+            <li>담당자 : 김승태</li>
+            <li>전화번호 : 02-709-1039</li>
+            <li>이메일 : seungtae_kim@lotte.net</li>
+        </ul>
+    </section>
+
+
+
+</main>
+
+<footer>
+    <div class="container">
+        © 2026 LOTTE GRS ACADEMY. All Rights Reserved.
+    </div>
+</footer>
+
+</body>
+</html>
